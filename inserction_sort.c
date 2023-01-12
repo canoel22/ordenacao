@@ -3,8 +3,18 @@
 
 #include <stdio.h>
 
-void inserction_sort(){
+void inserction_sort(int* vetor, int tam){
+    for (int i=1; i<tam; i++){
+        int j= i;
+        int atual = vetor[i];
 
+        while(j>0 && vetor[j-1]>atual){
+            vetor[j]=vetor[j-1];
+            j--;
+        }
+
+        vetor[j] = atual;
+    }
 }
 
 void main()
