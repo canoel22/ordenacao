@@ -1,15 +1,18 @@
-//Inserction Sort
-//Para compilar: gcc -o inserction_sort inserction_sort.c
+// Inserction Sort
+// Para compilar: gcc -o inserction_sort inserction_sort.c
 
 #include <stdio.h>
 
-void inserction_sort(int* vetor, int tam){
-    for (int i=1; i<tam; i++){
-        int j= i;
+void inserction_sort(int *vetor, int tam)
+{
+    for (int i = 1; i < tam; i++) //pega a partir da segunda pos do vetor
+    {
+        int j = i;
         int atual = vetor[i];
 
-        while(j>0 && vetor[j-1]>atual){
-            vetor[j]=vetor[j-1];
+        while (j > 0 && vetor[j - 1] > atual) //caso algum elemento seja menor que ele, vai para a pos anterior
+        {
+            vetor[j] = vetor[j - 1];
             j--;
         }
 

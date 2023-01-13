@@ -1,4 +1,4 @@
-// Selection sort
+// Selection sort 
 // Para compilar: gcc -o selection_sort selection_sort.c
 
 #include <stdio.h>
@@ -17,7 +17,7 @@ void selection_sort(int *vetor, int tam)
     {
         int menor = j;
 
-        for (int k = j + 1; k < tam; k++)
+        for (int k = j + 1; k < tam; k++) //pega um item e compara com todos os outros para achar algum menor que ele
         {
             if (vetor[menor] > vetor[k])
             {
