@@ -12,9 +12,9 @@ void swap(int *vetor, int i, int j)
 
 int particao(int *vetor, int esq, int dir)
 {
-    int pivo = vetor[(esq + dir) / 2];
+    int pivo = vetor[(esq + dir) / 2]; //escolhe um pivo no meio do vetor
 
-    while (1)
+    while (1) //divide de forma que os elementos à esquerda são menores que ele e os da direita são maiores
     {
         while (vetor[esq] < pivo)
         {
@@ -28,13 +28,13 @@ int particao(int *vetor, int esq, int dir)
 
         if (esq < dir)
         {
-            swap(vetor, esq, dir);
+            swap(vetor, esq, dir); //caso algum elemento maior esteja do lado menor (ou o inverso), troca
             esq++;
             dir--;
         }
         else
         {
-            return dir;
+            return dir; //retona a posição do pivo
         }
     }
 }
